@@ -1,7 +1,7 @@
 
 resource "aws_elb" "elb_result" {
-  name               = "${var.elb_title}-elb"
-  subnets			 = var.elb_subnets
+  name    = "${var.elb_title}-elb"
+  subnets = var.elb_subnets
 
   listener {
     lb_protocol       = "http"
@@ -19,7 +19,7 @@ resource "aws_elb" "elb_result" {
     target              = "TCP:${var.elb_instance_port}"
     interval            = 30
   }
- 
+
   cross_zone_load_balancing   = true
   idle_timeout                = 300
   connection_draining         = true

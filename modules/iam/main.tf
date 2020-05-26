@@ -1,6 +1,6 @@
 
 resource "aws_iam_role" "ec2_s3_read_only_role" {
-  name = "ec2_s3_read_only_role"
+  name               = "ec2_s3_read_only_role"
   assume_role_policy = var.assume_role_policy
 }
 
@@ -12,7 +12,7 @@ resource "aws_iam_policy" "s3_read_only_policy" {
 
 resource "aws_iam_policy_attachment" "ec2_s3_read_only_attachment" {
   name       = "ec2_s3_read_only_attachment"
-  roles      = [ aws_iam_role.ec2_s3_read_only_role.name ]
+  roles      = [aws_iam_role.ec2_s3_read_only_role.name]
   policy_arn = aws_iam_policy.s3_read_only_policy.arn
 }
 
