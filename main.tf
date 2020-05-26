@@ -79,9 +79,9 @@ module "footgo_app" {
   key_name  = var.key_name
   tenancy   = "default"
 
-  app_asg_desired_capacity  = 0
-  app_asg_min_size          = 0
-  app_asg_max_size          = 0
+  app_asg_desired_capacity  = 1
+  app_asg_min_size          = 1
+  app_asg_max_size          = 1
   app_vpc_zone_identifier   = [ module.footgo_vpc.public_subnet_a_id, module.footgo_vpc.public_subnet_b_id ]
   app_load_balancers		= [ module.footgo_elb.elb_name]
   app_termination_policies  = [ "OldestInstance" ]
