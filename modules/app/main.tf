@@ -28,7 +28,7 @@ resource "aws_autoscaling_group" "app_asg_result" {
   health_check_type         = "EC2"
   termination_policies	  	= var.app_termination_policies
   tags = {
-    Name = "${var.vpc_title} app insatnce in ASG"
+    Name = "${var.app_title} app insatnce in ASG"
   }
 
 }  
