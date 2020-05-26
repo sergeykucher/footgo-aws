@@ -27,9 +27,13 @@ resource "aws_autoscaling_group" "app_asg_result" {
   health_check_grace_period = 300
   health_check_type         = "EC2"
   termination_policies	  	= var.app_termination_policies
-  tags = {
-    Name = "${var.app_title} app insatnce in ASG"
-  }
+  tags = [
+    {
+      key					= "Name",
+	  value				= "${var.app_title} app insatnce in ASG",
+	  propagate_at_launch	= true
+    }
+  ]	
 
 }  
 
