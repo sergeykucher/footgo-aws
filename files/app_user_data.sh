@@ -1,4 +1,4 @@
 #!/bin/bash
-sudo aws s3 sync s3://footgo/target /home/ec2-user
-sudo chmod 755 /home/ec2-user/ROOT.war
-sudo /home/ec2-user/ROOT.war > /dev/null 2>&1&
+sudo aws s3 --region=eu-central-1 sync s3://footgo/target /footgo
+sudo chmod 755 /footgo/ROOT.war
+sudo /footgo/ROOT.war > /dev/null 2>&1&

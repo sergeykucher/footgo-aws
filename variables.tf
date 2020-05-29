@@ -34,5 +34,5 @@ variable "key_name" {
 }
 
 variable "app_image_id" {
-  default = "ami-0122f9a5047d9dec1"
+  default = "ami-028aa866be57d7afd"
 }
