@@ -18,7 +18,7 @@ resource "aws_launch_configuration" "app_lc_result" {
 
 resource "aws_autoscaling_group" "app_asg_result" {
   name                      = "${var.app_title} app ASG"
-  launch_configuration      = aws_launch_configuration.app_lc_result.name
+//  launch_configuration      = aws_launch_configuration.app_lc_result.name
   desired_capacity          = var.app_asg_desired_capacity
   min_size                  = var.app_asg_min_size
   max_size                  = var.app_asg_max_size
