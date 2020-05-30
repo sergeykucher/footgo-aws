@@ -16,9 +16,10 @@ resource "aws_launch_configuration" "app_lc_result" {
   placement_tenancy = var.tenancy
 }
 
+/*
 resource "aws_autoscaling_group" "app_asg_result" {
   name                      = "${var.app_title} app ASG"
-//  launch_configuration      = aws_launch_configuration.app_lc_result.name
+  launch_configuration      = aws_launch_configuration.app_lc_result.name
   desired_capacity          = var.app_asg_desired_capacity
   min_size                  = var.app_asg_min_size
   max_size                  = var.app_asg_max_size
@@ -50,3 +51,4 @@ resource "aws_autoscaling_policy" "app_as_policy_result" {
     target_value = var.app_cpu_utilization
   }
 }
+*/
